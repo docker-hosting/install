@@ -1,3 +1,3 @@
 #!/bin/sh
 
-docker run --rm -d --env-file backup.env -v ${PWD}/..:/data:ro dockerhosting/backup
+docker run --rm -d --env-file backup.env -v /var/www:/data:ro dockerhosting/backup
