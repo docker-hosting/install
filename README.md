@@ -34,3 +34,9 @@ ssh-copy-id [youruser]@[yourfedorahost]
 ## Webserver structure
 
 In order to run the web server you need to clone this repository into `/var/www`. You need to create a docker network with `docker network create nginx-proxy`.
+
+### Restore backup
+To restore a backup, edit the file `backup/backup.env` and insert your AWS credentials. Afterwards run `./backup/restore.sh` and all files will be restored from your AWS S3 Bucket.
+
+### Creating backups
+To create backups, you can edit the file `backup/backup.env` and change the `CRON_SCHEDULE` variable. Then run `./backup/backup.sh` and a docker container is started that will sync your `/var/www` with the declared AWS S3 Bucket.
