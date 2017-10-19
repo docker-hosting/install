@@ -39,4 +39,7 @@ In order to run the web server you need to clone this repository into `/var/www`
 To restore a backup, edit the file `backup/backup.env` and insert your AWS credentials. Afterwards run `./backup/restore.sh` and all files will be restored from your AWS S3 Bucket.
 
 ### Creating backups
-To create backups, you can edit the file `backup/backup.env` and change the `CRON_SCHEDULE` variable. Then run `./backup/backup.sh` and a docker container is started that will sync your `/var/www` with the declared AWS S3 Bucket.
+To create backups, you can edit the file `backup/backup.env` and change the `CRON_SCHEDULE` variable. Then run `./backup/start_sync.sh` and a docker container is started that will sync your `/var/www` with the declared AWS S3 Bucket.
+
+### Host your sites from scratch
+To start with a new server, you need two elementary docker-compose 'projects'. The first is [docker-hosting/nginx-proxy-template](https://github.com/docker-hosting/nginx-proxy-template), the second one is [docker-hosting/mail-forwarder-template](https://github.com/docker-hosting/mail-forwarder-template).
