@@ -33,4 +33,4 @@ ssh-copy-id [youruser]@[yourfedorahost]
 
 ## Webserver structure
 
-In order to run the web server you need to clone this repository into `/var/www`.
+In order to run the web server you need to clone this repository into `/var/www`. You need to create a docker network with `docker network create nginx-proxy`.
