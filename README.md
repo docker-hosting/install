@@ -16,15 +16,6 @@ cd dotfiles/install
 
 Then Log in again (with your newly created admin user).
 
-```bash
-# Configure and run docker
-sudo systemctl start docker
-sudo systemctl enable docker
-sudo gpasswd -a <SERVER_USERNAME> docker
-sudo systemctl restart docker
-docker network create nginx-proxy
-```
-
 If you want to, you can install the ssh key on your Mac/Linux host to log in without password
 ```bash
 # on your Mac / Linux host run
